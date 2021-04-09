@@ -8,7 +8,7 @@ trigger:
 
 variables:
 
-  azureServiceConnectionId: 'bdef8a20-aaac-4f80-b3a0-d9a32f99fd33'
+  #azureServiceConnectionId: 'bdef8a20-aaac-4f80-b3a0-d9a32f99fd33'
   
   # Web app name
   webAppName: 'python-webapp'
@@ -81,6 +81,6 @@ stages:
           - task: AzureWebApp@1
             displayName: 'Deploy Azure Web App : {{ webAppName }}'
             inputs:
-              azureSubscription: $(azureServiceConnectionId)
+              #azureSubscription: $(azureServiceConnectionId)
               appName: $(webAppName)
               package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
