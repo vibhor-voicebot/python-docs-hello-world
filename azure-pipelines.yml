@@ -4,20 +4,20 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/python
 
 trigger:
-- {{ branch }}
+- master
 
 variables:
   # Azure Resource Manager connection created during pipeline creation
   azureServiceConnectionId: '{{ azureServiceConnection.Id }}'
 
   # Web app name
-  webAppName: '{{ webAppName }}'
+  webAppName: 'python-webapp'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
 
   # Environment name
-  environmentName: '{{ webAppName }}'
+  environmentName: 'python-webapp'
 
   # Project root folder. Point to the folder containing manage.py file.
   projectRoot: $(System.DefaultWorkingDirectory)
